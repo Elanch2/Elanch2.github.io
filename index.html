@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elijah Hubrechts | Persoonlijke Pagina</title>
+    <title>Elijah Hubrechts | Over mij</title>
     <style>
       * {
         box-sizing: border-box;
@@ -26,7 +26,7 @@
       }
 
       header h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         margin-bottom: 10px;
       }
 
@@ -40,19 +40,6 @@
         padding: 0 20px;
       }
 
-      .about,
-      .hobbies,
-      .contact {
-        margin-bottom: 60px;
-      }
-
-      .about img {
-        width: 180px;
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto 20px auto;
-      }
-
       h2 {
         color: #0078d7;
         font-size: 1.8rem;
@@ -64,6 +51,35 @@
       p {
         font-size: 1rem;
         margin-bottom: 15px;
+      }
+
+      /* inline layout voor Over mij */
+      .about {
+        margin-bottom: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .about img {
+        width: 220px;
+        border-radius: 10px;
+        flex-shrink: 0;
+      }
+
+      .about-text {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      /* foto-sectie */
+      .photos img {
+        display: block;
+        margin: 20px auto;
+        max-width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
 
       ul {
@@ -87,75 +103,80 @@
         padding: 20px;
       }
 
-      footer a {
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-      }
+      @media (max-width: 700px) {
+        .about {
+          flex-direction: column;
+          text-align: center;
+        }
 
-      footer a:hover {
-        text-decoration: underline;
+        .about img {
+          margin-bottom: 20px;
+        }
+
+        .photos img {
+          max-width: 90%;
+        }
       }
     </style>
   </head>
+
   <body>
     <header>
       <h1>Elijah Hubrechts</h1>
-      <p>Student Elektronica-ICT | 20 jaar | levensgenieter</p>
+      <p>Elektronica-ICT student | 20 jaar | Altijd in voor iets leuks</p>
     </header>
 
     <section class="about">
       <img src="EH.jpg" alt="Foto van Elijah Hubrechts" />
-      <h2>Over mij</h2>
-      <p>
-        Hallo! Ik ben <strong>Elijah Hubrechts</strong>, 20 jaar oud en ik studeer
-        <strong>Elektronica-ICT</strong> in mijn laatste jaar. Technologie boeit me
-        enorm — ik vind het geweldig om zowel met hardware als software te werken en
-        steeds bij te leren over hoe dingen écht in elkaar zitten.
-      </p>
-      <p>
-        Buiten mijn studies ben ik ook actief sporter: ik speel volleybal bij
-        <strong>Lizards Lubbeek</strong>, waar ik enorm veel energie en plezier uithaal.
-        Het is niet alleen een leuke teamsport, maar ook een geweldige manier om
-        vrienden te maken en actief te blijven.
-      </p>
-      <p>
-        Daarnaast besteed ik veel tijd aan programmeren, gamen met vrienden en uitgaan met vrienden.
-      </p>
+      <div class="about-text">
+        <h2>Hey, ik ben Elijah!</h2>
+        <p>
+          Ik ben 20 jaar oud en zit in m’n laatste jaar
+          <strong>Elektronica-ICT</strong>. Ondanks de naam draait mijn richting eigenlijk
+          vooral rond <strong>software</strong> — veel programmeren dus, wat ik superleuk
+          vind. Ik pruts graag in code tot alles eindelijk werkt (of tot ik te veel koffie
+          op heb).
+        </p>
+        <p>
+          Als ik niet achter m’n laptop zit, vind je me waarschijnlijk op het
+          volleybalveld bij <strong>Lizards Lubbeek</strong>. Daar kan ik echt m’n energie
+          kwijt en geniet ik van de teamspirit (en oké, de derde helft hoort er ook bij).
+        </p>
+        <p>
+          Verder hou ik van gamen, chillen met vrienden en gewoon genieten van het
+          studentenleven — of dat nu achter een scherm is of met een pintje in de hand.
+        </p>
+      </div>
     </section>
 
     <section class="hobbies">
-      <h2>Hobby’s & Passies</h2>
+      <h2>Wat ik zoal doe</h2>
       <ul>
         <li>Volleybal bij Lizards Lubbeek</li>
-        <li>Gamen</li>
-        <li>Programmeren</li>
+        <li>Programmeren & projecten bouwen</li>
+        <li>Gamen (te veel waarschijnlijk)</li>
         <li>Uitgaan met vrienden</li>
+        <li>Nieuwe dingen leren</li>
       </ul>
       <p>
-        Volleybal speelt een grote rol in mijn leven. De sfeer binnen Lizards Lubbeek is
-        geweldig, en de combinatie van sport, discipline en teamgeest helpt me om ook in
-        mijn studie en andere projecten doelgericht te blijven werken.
+        Een mix van sport, technologie en gezelligheid — dat vat mij wel goed samen.
+        Afwisseling houden vind ik belangrijk: wat serieuze projecten afwisselen met wat
+        ontspanning en plezier, da’s mijn ideale combo.
       </p>
     </section>
 
     <section class="photos">
       <h2>Foto’s</h2>
       <p>
-        Hier kan je wat foto’s toevoegen – van volleybalwedstrijden, je projecten of
-        leuke momenten met vrienden.
+        Hier zou ik wat foto’s kunnen zetten van volleybal, uitstapjes of onze
+        legendarische studentennachten 🎉
       </p>
-      <img src="foto1.jpg" alt="Foto 1" width="100%" style="margin-top: 10px" />
-      <img
-        src="foto2.jpg"
-        alt="Foto 2"
-        width="100%"
-        style="margin-top: 10px"
-      />
+      <img src="lizards.jpeg" alt="Volleybal bij Lizards Lubbeek" />
+      <img src="suitup.jpg" alt="Elijah in kostuum" />
     </section>
 
     <footer>
-      <p>Gemaakt door Elijah Hubrechts</p>
+      <p>Elijah</p>
     </footer>
   </body>
 </html>
